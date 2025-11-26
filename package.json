@@ -14,6 +14,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@vitejs/plugin-basic-ssl": "^2.1.0",
     "fhir-react": "^1.0.2",
     "fhirclient": "^2.5.4",
     "react": "^18.3.1",

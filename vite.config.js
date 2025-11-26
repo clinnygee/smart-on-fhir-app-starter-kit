@@ -1,15 +1,16 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import svgr from 'vite-plugin-svgr'
+import basicSsl from '@vitejs/plugin-basic-ssl';
 import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
-    svgr() // Allows importing SVGs as React components
+    svgr(),
+    basicSsl()
   ],
-  
   // Resolve absolute imports
   resolve: {
     alias: {
@@ -20,7 +21,7 @@ export default defineConfig({
   // Server configuration
   server: {
     port: 3000,
-    open: true,
+    open: false,
     // Proxy configuration if you need to proxy API requests
     proxy: {
       // Example: proxy FHIR API requests
