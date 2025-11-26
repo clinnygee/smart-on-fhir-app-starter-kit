@@ -1,31 +1,39 @@
 {
-  "name": "smart-on-fhir",
-  "version": "0.1.0",
+  "name": "smart-on-fhir-app-starter-kit",
+  "version": "2.0.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "fhir-visualizers": "^0.0.6",
-    "fhirclient": "^2.4.0",
-    "react": "^17.0.2",
-    "react-bootstrap": "^1.6.4",
-    "react-dom": "^17.0.2",
-    "react-hook-form": "^7.16.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "test": "vitest"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "fhir-react": "^1.0.2",
+    "fhirclient": "^2.5.4",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.66.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.15.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "jsdom": "^25.0.1",
+    "vite": "^6.0.1",
+    "vite-plugin-svgr": "^4.3.0",
+    "vitest": "^2.1.8"
   },
   "browserslist": {
     "production": [
